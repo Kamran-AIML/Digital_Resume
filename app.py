@@ -17,7 +17,7 @@ profile_pic = Image.open(PROFILE_PIC)
 # --- SIDEBAR ---
 # --- SIDEBAR ---
 with st.sidebar:
-    st.image(profile_pic, width=150)
+    st.image(profile_pic, width=300)
     st.title("Kamran Shaikh")
     st.markdown("**AI/ML Engineer**")
     st.markdown("📍 Mumbai, India")
