@@ -1,6 +1,7 @@
 import streamlit as st
 from PIL import Image
 import base64
+import requests
 
 
 # --- PATH SETTINGS ---
@@ -53,8 +54,9 @@ with st.sidebar:
 # --- ABOUT ---
 st.title("About Me")
 st.write("""
-I'm an AI/ML Engineer passionate about building intelligent systems that blend data, language, and automation.
-Currently focused on projects in Document AI, LLMs, OCR, and deployment tools like Streamlit & FastAPI.
+NLP-focused AI/ML Engineer passionate about building intelligent, language-driven solutions.
+I specialize in Document AI, OCR, and LLM applications — developing tools that convert complex data into usable insights.
+My tech stack includes FastAPI, LangChain, OpenAI, and Streamlit, enabling rapid development and deployment of production-ready ML systems.
 """)
 
 # --- SKILLS ---
