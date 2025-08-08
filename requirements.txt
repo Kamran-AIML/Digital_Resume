@@ -2,3 +2,4 @@ streamlit>=1.35.0
 Pillow
 requests
 streamlit-lottie
+streamlit-vertical-timeline

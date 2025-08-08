@@ -71,27 +71,64 @@ st.markdown("""
 - **Data Engineering:** Web scraping, pipelines, SQL, ChromaDB
 """)
 
+# # --- EXPERIENCE ---
+# st.header("Work Experience")
+
+# st.subheader("Machine Learning Engineer – HealthIndia Insurance TPA (Apr 2024 – Present)")
+# st.write("""
+# - Automated healthcare document processing using LLMs and Azure OCR  
+# - Built pipelines for NEFT extraction, CCN generation & invoice parsing  
+# - Deployed scalable FastAPI-based tools in production environments
+# """)
+
+# st.subheader("Python Developer – DG Market (Apr 2023 – Apr 2024)")
+# st.write("""
+# - Created APIs and automation tools for tender analytics  
+# - Scraped, transformed, and stored large volumes of structured/unstructured data
+# """)
+
+# st.subheader("Associate Engineer – Ardentisys-Tebillion (Oct 2022 – Mar 2023)")
+# st.write("""
+# - Built backend modules and APIs for business automation tools  
+# - Contributed to scalable enterprise product logic using Python
+# """)
+
 # --- EXPERIENCE ---
-st.header("Work Experience")
+from streamlit_vertical_timeline import vertical_timeline
 
-st.subheader("Machine Learning Engineer – HealthIndia Insurance TPA (Apr 2024 – Present)")
-st.write("""
-- Automated healthcare document processing using LLMs and Azure OCR  
-- Built pipelines for NEFT extraction, CCN generation & invoice parsing  
-- Deployed scalable FastAPI-based tools in production environments
-""")
+st.header("Work Experience Timeline")
 
-st.subheader("Python Developer – DG Market (Apr 2023 – Apr 2024)")
-st.write("""
-- Created APIs and automation tools for tender analytics  
-- Scraped, transformed, and stored large volumes of structured/unstructured data
-""")
+timeline_data = [
+    {
+        "title": "Machine Learning Engineer – HealthIndia Insurance TPA",
+        "subtitle": "Apr 2024 – Present",
+        "content": """
+        - Automated healthcare document processing using LLMs and Azure OCR  
+        - Built pipelines for NEFT extraction, CCN generation & invoice parsing  
+        - Deployed scalable FastAPI-based tools in production environments
+        """
+    },
+    {
+        "title": "Python Developer – DG Market",
+        "subtitle": "Apr 2023 – Apr 2024",
+        "content": """
+        - Created APIs and automation tools for tender analytics  
+        - Scraped, transformed, and stored large volumes of structured/unstructured data
+        """
+    },
+    {
+        "title": "Associate Engineer – Ardentisys-Tebillion",
+        "subtitle": "Oct 2022 – Mar 2023",
+        "content": """
+        - Built backend modules and APIs for business automation tools  
+        - Contributed to scalable enterprise product logic using Python
+        """
+    }
+]
 
-st.subheader("Associate Engineer – Ardentisys-Tebillion (Oct 2022 – Mar 2023)")
-st.write("""
-- Built backend modules and APIs for business automation tools  
-- Contributed to scalable enterprise product logic using Python
-""")
+vertical_timeline(timeline_data)
+
+
 
 # --- PROJECTS ---
 st.header("Projects")
