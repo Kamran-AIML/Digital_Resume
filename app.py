@@ -93,40 +93,47 @@ st.markdown("""
 # - Contributed to scalable enterprise product logic using Python
 # """)
 
+
 # --- EXPERIENCE ---
-from streamlit_vertical_timeline import vertical_timeline
+st.header("Work Experience")
 
-st.header("Work Experience Timeline")
+def experience(role, company, period, details):
+    st.markdown(f"### {role} – {company}")
+    st.markdown(f"**_{period}_**")
+    st.write(details)
+    st.markdown("<hr style='margin:5px 0;'>", unsafe_allow_html=True)
 
-timeline_data = [
-    {
-        "title": "Machine Learning Engineer – HealthIndia Insurance TPA",
-        "subtitle": "Apr 2024 – Present",
-        "content": """
-        - Automated healthcare document processing using LLMs and Azure OCR  
-        - Built pipelines for NEFT extraction, CCN generation & invoice parsing  
-        - Deployed scalable FastAPI-based tools in production environments
-        """
-    },
-    {
-        "title": "Python Developer – DG Market",
-        "subtitle": "Apr 2023 – Apr 2024",
-        "content": """
-        - Created APIs and automation tools for tender analytics  
-        - Scraped, transformed, and stored large volumes of structured/unstructured data
-        """
-    },
-    {
-        "title": "Associate Engineer – Ardentisys-Tebillion",
-        "subtitle": "Oct 2022 – Mar 2023",
-        "content": """
-        - Built backend modules and APIs for business automation tools  
-        - Contributed to scalable enterprise product logic using Python
-        """
-    }
-]
+experience(
+    "Machine Learning Engineer",
+    "HealthIndia Insurance TPA",
+    "Apr 2024 – Present",
+    """
+    - Automated healthcare document processing using LLMs and Azure OCR  
+    - Built pipelines for NEFT extraction, CCN generation & invoice parsing  
+    - Deployed scalable FastAPI-based tools in production environments
+    """
+)
 
-vertical_timeline(timeline_data)
+experience(
+    "Python Developer",
+    "DG Market",
+    "Apr 2023 – Apr 2024",
+    """
+    - Created APIs and automation tools for tender analytics  
+    - Scraped, transformed, and stored large volumes of structured/unstructured data
+    """
+)
+
+experience(
+    "Associate Engineer",
+    "Ardentisys-Tebillion",
+    "Oct 2022 – Mar 2023",
+    """
+    - Built backend modules and APIs for business automation tools  
+    - Contributed to scalable enterprise product logic using Python
+    """
+)
+
 
 
 
