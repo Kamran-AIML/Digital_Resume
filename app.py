@@ -2,6 +2,8 @@ import streamlit as st
 from PIL import Image
 import base64
 import requests
+from streamlit_lottie import st_lottie
+import json
 
 
 # --- PATH SETTINGS ---
@@ -71,28 +73,6 @@ st.markdown("""
 - **Data Engineering:** Web scraping, pipelines, SQL, ChromaDB
 """)
 
-# # --- EXPERIENCE ---
-# st.header("Work Experience")
-
-# st.subheader("Machine Learning Engineer – HealthIndia Insurance TPA (Apr 2024 – Present)")
-# st.write("""
-# - Automated healthcare document processing using LLMs and Azure OCR  
-# - Built pipelines for NEFT extraction, CCN generation & invoice parsing  
-# - Deployed scalable FastAPI-based tools in production environments
-# """)
-
-# st.subheader("Python Developer – DG Market (Apr 2023 – Apr 2024)")
-# st.write("""
-# - Created APIs and automation tools for tender analytics  
-# - Scraped, transformed, and stored large volumes of structured/unstructured data
-# """)
-
-# st.subheader("Associate Engineer – Ardentisys-Tebillion (Oct 2022 – Mar 2023)")
-# st.write("""
-# - Built backend modules and APIs for business automation tools  
-# - Contributed to scalable enterprise product logic using Python
-# """)
-
 
 # --- EXPERIENCE ---
 st.header("Work Experience")
@@ -137,26 +117,47 @@ experience(
 
 
 
+# --- ANIMATION ---
+# Function to load local Lottie JSON file
+def load_lottiefile(filepath: str):
+    with open(filepath, "r") as f:
+        return json.load(f)
+
+# Load your animation
+lottie_coding = load_lottiefile("assets/AI_animation.json")
+
+
+
+
 # --- PROJECTS ---
 st.header("Projects")
 
-st.markdown("🔹 **Document Classification System** – YOLO, CNN, LSTM")
-st.markdown("Automated pipeline combining object detection + image/text classification.")
+col1, col2 = st.columns([2, 1])  # 2 parts text, 1 part animation
 
-st.markdown("🔹 **Auto NEFT Extraction** – YOLOv8s, Tesseract")
-st.markdown("Extracted cheque data using OCR and regex post-processing.")
+with col1:
+    st.markdown("🔹 **Document Classification System** – YOLO, CNN, LSTM")
+    st.markdown("Automated pipeline combining object detection + image/text classification.")
 
-st.markdown("🔹 **Auto CCN Generation** – Azure OCR, LLaMA")
-st.markdown("Generated CCNs from healthcare forms using LLM + OCR pipeline.")
+    st.markdown("🔹 **Auto NEFT Extraction** – YOLOv8s, Tesseract")
+    st.markdown("Extracted cheque data using OCR and regex post-processing.")
 
-st.markdown("🔹 **PDF Chatbot** – LangChain, ChromaDB")
-st.markdown("Built a chatbot to answer questions from uploaded PDFs.")
+    st.markdown("🔹 **Auto CCN Generation** – Azure OCR, LLaMA")
+    st.markdown("Generated CCNs from healthcare forms using LLM + OCR pipeline.")
 
-st.markdown("🔹 **BTC Price Predictor** – LSTM, Python")
-st.markdown("[GitHub Link](https://github.com/Kamran-AIML/BTC_Price_Prediction) – Time-series model to forecast Bitcoin prices.")
+    st.markdown("🔹 **PDF Chatbot** – LangChain, ChromaDB")
+    st.markdown("Built a chatbot to answer questions from uploaded PDFs.")
 
-st.markdown("🔹 **Face Recognition Attendance System** – OpenCV, Dlib")
-st.markdown("Live facial recognition for employee attendance logging.")
+    st.markdown("🔹 **BTC Price Predictor** – LSTM, Python")
+    st.markdown("[GitHub Link](https://github.com/Kamran-AIML/BTC_Price_Prediction) – Time-series model to forecast Bitcoin prices.")
+
+    st.markdown("🔹 **Face Recognition Attendance System** – OpenCV, Dlib")
+    st.markdown("Live facial recognition for employee attendance logging.")
+
+with col2:
+    st_lottie(lottie_coding, height=300, key="projects_animation")
+
+
+
 
 # --- EDUCATION ---
 st.header("Education")
