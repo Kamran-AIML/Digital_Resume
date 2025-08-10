@@ -161,8 +161,8 @@ with col2:
 
 # --- EDUCATION ---
 st.header("Education")
-st.write("**B.E in Electronics Engineering** – M.H. Saboo Siddik College of Engineering (2015–2021)")
-st.write("**Diploma in Electronics Engineering** – Thakur Polytechnic (2012–2015)")
+st.write("**Master Certification in Data Science with AI & AWS** – IT Vedant (2022)")
+st.write("**B.E in Electronics Engineering** – M.H. Saboo Siddik College of Engineering (2021)")
 
 # --- CONTACT ---
 st.header("Get in Touch")
