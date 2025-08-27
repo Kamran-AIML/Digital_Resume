@@ -144,8 +144,12 @@ with col1:
     st.markdown("🔹 **Auto CCN Generation** – Azure OCR, LLaMA")
     st.markdown("Generated CCNs from healthcare forms using LLM + OCR pipeline.")
 
-    st.markdown("🔹 **PDF Chatbot** – LangChain, ChromaDB")
-    st.markdown("Built a chatbot to answer questions from uploaded PDFs.")
+    # st.markdown("🔹 **PDF Chatbot** – LangChain, ChromaDB")
+    # st.markdown("Built a chatbot to answer questions from uploaded PDFs.")
+
+    st.markdown("🔹 **PDF Chatbot** – LangChain, FSSAI")
+    st.markdown("[Live Demo](https://kami-pdf-chatbot.streamlit.app/) – Finance-focused PDF chat assistant that answers questions from uploaded PDFs.")
+
 
     st.markdown("🔹 **BTC Price Predictor** – LSTM, Python")
     st.markdown("[GitHub Link](https://github.com/Kamran-AIML/BTC_Price_Prediction) – Time-series model to forecast Bitcoin prices.")
